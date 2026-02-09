@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 12px;
+  background: white;
+  color: black;
+  
+
+}
+a {
+  text-decoration: none;
+}
+
