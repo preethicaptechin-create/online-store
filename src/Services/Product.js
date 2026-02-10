@@ -35,7 +35,10 @@ import frock from "../assets/frock.jpg";
 import kidscoat from "../assets/kidscoat.jpg";
 import kidspink from "../assets/kidspink.jpg";
 import tshirt from "../assets/tshirt.jpg"
-
+import skirt from "../assets/skirt.jpg"
+import menscoat from "../assets/menscoat.jpg"
+import phone from "../assets/phone.jpg"
+import shoes from "../assets/shoes.jpg"
 
 export const products = [
   {
@@ -61,5 +64,29 @@ export const products = [
     name: "Kids T-Shirt",
     price: 200,
     image: tshirt,
+  },
+  {
+    id: 5,
+    name: " skirt",
+    price: 200,
+    image: skirt,
+  },
+   {
+    id: 6,
+    name: " Denim coat",
+    price: 200,
+    image: menscoat,
+  },
+   {
+    id: 7,
+    name: " phone",
+    price: 200,
+    image: phone,
+  },
+   {
+    id: 8,
+    name: " shoes",
+    price: 200,
+    image: shoes,
   },
 ];

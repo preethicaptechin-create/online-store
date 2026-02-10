@@ -95,3 +95,26 @@ a {
 .header a:hover {
   color: #ff4081;
 }
+/* search */
+
+.search-bar {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* cart icon */
+
+.cart-icon {
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cart-icon:hover {
+  color: #ff4081;
+}
+
