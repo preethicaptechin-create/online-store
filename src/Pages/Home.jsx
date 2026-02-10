@@ -37,11 +37,107 @@ import sale from "../assets/sale.jpg"
 import arrival from "../assets/arrival.jpg"
 import "./Home.css";
 
+// const Home = () => {
+//   return (
+//     <div className="home">
+
+//       {/* Image slider */}
+//       <div className="slider">
+//         <div className="slide-track">
+//           {[main1, main2, main3, main4, main5, main6,
+//             main1, main2, main3, main4, main5, main6
+//           ].map((img, i) => (
+//             <img key={i} src={img} alt={`slide-${i}`} />
+//           ))}
+//         </div>
+//       </div>
+
+
+//       {/* Offer section */}
+
+// <div className="para-container">
+
+//   <div className="para-content">
+//     <img src={offers} alt="" />
+//     <h2>
+//         Refresh your wardrobe ✨ <br/>
+//         Trendy dresses delivered <br/>
+//         Fashion made fun.
+//       </h2>
+//   </div>
+
+//   <div className="new-arrival-card">
+//     <img src={arrival} alt="" />
+//     <div className="arrival-overlay">
+//       <h2>New Arrival</h2>
+//       <button>Shop Now</button>
+//     </div>
+//   </div>
+
+// </div>
+
+
+
+//  <div className="para-left">
+//     <img src={sale} alt="left" />
+//     <h2>
+//   🔥 Flat 30% OFF — Limited Time Only!
+// </h2>
+
+// </div>
+
+//  </div>
+//   );
+// };
+
+// export default Home;
+// const Home = () => {
+//   return (
+//     <div className="home">
+
+   
+//       <div className="slider">
+//         <div className="slide-track">
+//           {[main1, main2, main3, main4, main5, main6,
+//             main1, main2, main3, main4, main5, main6
+//           ].map((img, i) => (
+//             <img key={i} src={img} alt={`slide-${i}`} />
+//           ))}
+//         </div>
+//       </div>
+
+//       OFFER + ARRIVAL SECTION
+//      <div className="cards-row">
+
+
+//         <div className="arrival-card">
+//           <img src={arrival} alt="" />
+//           <div className="arrival-overlay">
+//             <h2>New Arrival</h2>
+//             <button>Shop Now</button>
+//           </div>
+//         </div>
+
+//       </div>
+
+//       <div className="sale-banner">
+//         <img src={sale} alt="" />
+//         <h2>🔥 Flat 30% OFF — Limited Time Only!</h2>
+//       </div>
+
+    
+ 
+
+//     </div>
+//   );
+// };
+// export default Home;
+
 const Home = () => {
   return (
     <div className="home">
 
-      {/* Image slider */}
+      {/* IMAGE SLIDER — unchanged */}
       <div className="slider">
         <div className="slide-track">
           {[main1, main2, main3, main4, main5, main6,
@@ -52,41 +148,25 @@ const Home = () => {
         </div>
       </div>
 
+      {/* ARRIVAL + SALE — SAME ROW */}
+      <div className="cards-row">
 
-      {/* Offer section */}
+        <div className="arrival-card">
+          <img src={arrival} alt="" />
+          <div className="arrival-overlay">
+            <h2>New Arrival</h2>
+            <button>Shop Now</button>
+          </div>
+        </div>
 
-<div className="para-container">
+        <div className="sale-banner">
+          <img src={sale} alt="" />
+          <h2>🔥 Flat 30% OFF — Limited Time Only!</h2>
+        </div>
 
-  <div className="para-content">
-    <img src={offers} alt="" />
-    <h2>
-        Refresh your wardrobe ✨ <br/>
-        Trendy dresses delivered <br/>
-        Fashion made fun.
-      </h2>
-  </div>
+      </div>
 
-  <div className="new-arrival-card">
-    <img src={arrival} alt="" />
-    <div className="arrival-overlay">
-      <h2>New Arrival</h2>
-      <button>Shop Now</button>
     </div>
-  </div>
-
-</div>
-
-
-
- <div className="para-left">
-    <img src={sale} alt="left" />
-    <h2>
-  🔥 Flat 30% OFF — Limited Time Only!
-</h2>
-
-</div>
-
- </div>
   );
 };
 
