@@ -45,6 +45,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app">
+
         <Header />
 
         <main className="content">
@@ -56,6 +57,7 @@ function App() {
         </main>
 
         <Footer />
+
       </div>
     </BrowserRouter>
   );
