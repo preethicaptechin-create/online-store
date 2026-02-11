@@ -5,9 +5,9 @@ import "./Beauty.css";
 const Beauty = () => {
 
   // filter beauty products
-  const beautyProducts = products.filter(product =>
-    product.name.toLowerCase().includes("beauty")
-  );
+const beautyProducts = products.filter(
+  product => product.category === "beauty"
+);
 
   // quantity state
   const [counts, setCounts] = useState({});
@@ -29,7 +29,7 @@ const Beauty = () => {
   return (
     <div className="beauty-page">
 
-      <h1>Beauty Collection</h1>
+      <h1>Beauty Products</h1>
 
       <div className="beauty-grid">
 

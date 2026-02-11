@@ -16,6 +16,7 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import logo1 from "../assets/logo1.jpg"
 
 function Header() {
   return (
@@ -37,6 +38,8 @@ function Header() {
 
       {/* Navigation */}
       <div className="header">
+        {/* <div className="logo">  <img src={logo1} alt="logo" /></div> */}
+    
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
         <Link to="/login">Login</Link>

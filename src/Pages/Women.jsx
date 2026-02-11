@@ -5,9 +5,10 @@ import "./Women.css";
 const Women = () => {
 
   // filter women products
-  const womenProducts = products.filter(product =>
-    product.name.toLowerCase().includes("women")
-  );
+const womenProducts = products.filter(
+  product => product.category === "women"
+);
+
 
   // quantity state
   const [counts, setCounts] = useState({});

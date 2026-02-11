@@ -94,6 +94,9 @@ import Kids from "./Pages/Kids";
 import Beauty from "./Pages/Beauty";
 import Shoes from "./Pages/Shoes";
 import Mobile from "./Pages/Mobile";
+import ProductDetails from "./Pages/ProductDetails";
+
+
 
 import "./App.css";
 
@@ -117,6 +120,8 @@ function App() {
           <Route path="/mobiles" element={<Mobile />} />
 
             <Route path="/shoes" element={<Shoes />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+
           </Routes>
         </main>
 

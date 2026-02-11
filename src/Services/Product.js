@@ -102,6 +102,12 @@ import kiddress4 from "../assets/kiddress4.jpg"
 import baby from "../assets/baby.jpg"
 import baby2 from "../assets/baby2.jpg"
 import baby3 from "../assets/baby3.jpg"
+import kurti2 from "../assets/Kurti1.jpg"
+import kurti1 from "../assets/Kurti2.jpg"
+import Shoe18 from "../assets/shoe18.jpg"
+import Shoe19 from "../assets/shoe19.jpg"
+// import shoe20 from "../assets/shoe20.jpg"
+import Soe from "../assets/Soe.jpg"
 
 
 export const products = [
@@ -121,7 +127,7 @@ export const products = [
   },
   {
     id: 3,
-    name: "Kids Pink Frock",
+    name: "Kids Frock",
     price: 100,
     image: kidspink,
      category: "kids"
@@ -135,7 +141,7 @@ export const products = [
   },
   {
     id: 5,
-    name: "womens skirt",
+    name: "Floral skirt",
     price: 200,
     image: skirt,
      category: "Women"
@@ -145,11 +151,11 @@ export const products = [
     name: " Denim coat",
     price: 200,
     image: menscoat,
-    category: "women"
+    category: "men"
   },
    {
     id: 7,
-    name: " Mobiles",
+    name: " Vivo",
     price: 200,
     image: phone,
      category: "mobile"
@@ -165,14 +171,15 @@ export const products = [
     id: 9,
     name: " shoes",
     price: 800,
-    image: shoe1,
+    image: Soe,
      category: "shoes"
   },
      {
     id: 10,
     name: " shoes",
     price: 1000,
-    image: shoe2,
+    image: Shoe19,
+     category: "shoes"
   },
      {
     id: 11,
@@ -232,70 +239,70 @@ export const products = [
   },
      {
     id: 19,
-    name: " Mobiles",
+    name: " oppo",
     price: 15000,
     image: phone1,
      category: "mobile"
   },
    {
     id: 20,
-    name: " Mobiles",
+    name: " poco",
     price: 18000,
     image: phone2,
      category: "mobile"
   },
    {
     id: 21,
-    name: " Mobiles",
+    name: " samsung",
     price: 20000,
     image: phone3,
      category: "mobile"
   },
    {
     id: 22,
-    name: "  Mobiles",
+    name: " Vivo Y58",
     price: 25000,
     image: phone4,
      category: "mobile"
   },
    {
     id: 23,
-    name: "  Mobiles",
+    name: "  Xiaomi",
     price: 30000,
     image: phone5,
     category: "mobile"
   },
    {
     id: 24,
-    name: " Mobiles",
+    name: " Sony",
     price: 24000,
     image: phone6,
     category: "mobile"
   },
    {
     id: 25,
-    name: " Mobiles",
+    name: " one plus",
     price: 25000,
     image: phone7,
     category: "mobile"
   },
    {
     id: 26,
-    name: " Mobiles",
+    name: " poco",
     price: 18000,
     image: phone9,
     category: "mobile"
   },
    {
     id: 27,
-    name: " Mobiles",
+    name: " vivo",
     price: 26000,
     image: phone10,
     category: "mobile"
   },
    {
     id: 28,
-    name: " Mobiles",
+    name: " oppo",
     price: 29000,
     image: phone11,
     category: "mobile"
@@ -304,49 +311,49 @@ export const products = [
 
    {
     id: 29,
-    name: " men",
+    name: " shirt",
     price: 900,
     image: Men1,
     category: "men"
   },
    {
     id: 30,
-    name: " men",
+    name: "Formal wear",
     price: 500,
     image: Men2,
     category: "men"
   },
    {
     id: 31,
-    name: " men",
+    name: " Shirt",
     price: 650,
     image: Men3,
     category: "men"
   },
    {
     id: 32,
-    name: " men",
+    name: " Shirt",
     price: 800,
     image: Men4,
     category: "men"
   },
    {
     id: 33,
-    name: " men",
+    name: " T-shirt",
     price: 900,
     image: Men5,
     category: "men"
   },
    {
     id: 34,
-    name: " men",
+    name: " T-shirt",
     price: 1500,
     image: Men6,
     category: "men"
   },
    {
     id: 35,
-    name: " men",
+    name: "cargo pant",
     price: 2000,
     image: Men7,
     category: "men"
@@ -354,42 +361,42 @@ export const products = [
  
    {
     id: 37,
-    name: " men",
+    name: " Cargo pant",
     price: 1600,
     image: Men9,
     category: "men"
   },
    {
     id: 38,
-    name: " men",
+    name: " Denim Pant",
     price: 2500,
     image: Men10,
     category: "men"
   },
    {
     id: 39,
-    name: " men",
+    name: "Kurta set",
     price: 1000,
     image: Men11,
     category: "men"
   },
    {
     id: 40,
-    name: " men",
+    name: " Kurta set",
     price: 2200,
     image: Men12,
     category: "men"
   },
    {
     id: 41,
-    name: " men",
+    name: " Kurta set",
     price: 1150,
     image: Men13,
     category: "men"
   },
     {
     id: 42,
-    name: "women ",
+    name: "croptop ",
     price: 1150,
     image: croptop2,
    category: "women"
@@ -459,77 +466,77 @@ export const products = [
   },
    {
     id: 52,
-    name: " beauty",
+    name: " Lucury perfumes",
     price: 1150,
     image: perfume2,
     category: "beauty"
   },
   {
     id: 53,
-    name: "beauty",
+    name: "Perfume",
     price: 1150,
     image: perfume,
     category: "beauty"
   },
   {
     id: 54,
-    name: " beauty",
+    name: " Face wash",
     price: 1150,
     image: facewash,
     category: "beauty"
   },
   {
     id: 55,
-    name: " beauty",
+    name: " beauty products",
     price: 1150,
     image: kit,
     category: "beauty"
   },
   {
     id: 56,
-    name: " beauty",
+    name: " Facial creams",
     price: 1150,
     image: cream,
     category: "beauty"
   },
    {
     id: 57,
-    name: " beauty",
+    name: " makeup brush",
     price: 1150,
     image: brush,
     category: "beauty"
   },
    {
     id: 58,
-    name: " beauty",
+    name: " Lipstick",
     price: 1150,
     image: lipstick2,
     category: "beauty"
   },
    {
     id: 59,
-    name: " beauty",
+    name: " Lipgloss",
     price: 1150,
     image: lipgloss,
     category: "beauty"
   },
    {
     id: 60,
-    name: " beauty",
+    name: " Lipstick",
     price: 1150,
     image:lipstick ,
     category: "beauty"
   },
    {
     id: 61,
-    name: " beauty",
+    name: " eyeshadow",
     price: 1150,
     image: eyeshadow,
     category: "beauty"
   },
      {
     id: 62,
-    name: " Mobiles",
+    name: " Samsang galaxy",
     price: 29000,
     image: phone13,
     category: "mobile"
@@ -583,6 +590,29 @@ export const products = [
     image: baby3,
     category: "kids"
   },
+  {
+    id: 69,
+    name: "Kurti",
+    price: 500,
+    image: kurti1,
+    category: "women"
+  },
+
+  {
+    id: 70,
+    name: "Kurti",
+    price: 500,
+    image: kurti2,
+    category: "women"
+  },
+      {
+    id: 71,
+    name: " shoes",
+    price: 800,
+    image: Shoe18,
+     category: "shoes"
+  },
+
 
 
 ];
