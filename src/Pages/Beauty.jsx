@@ -1,41 +1,80 @@
-import React from "react";
-import { products } from "../Services/Product"; // adjust path if needed
-import "./Beauty.css"
+import React, { useState } from "react";
+import { products } from "../Services/Product";
+import "./Beauty.css";
 
 const Beauty = () => {
 
-  // filter shoe products
+  // filter beauty products
   const beautyProducts = products.filter(product =>
     product.name.toLowerCase().includes("beauty")
   );
 
+  // quantity state
+  const [counts, setCounts] = useState({});
+
+  const addItem = id => {
+    setCounts(prev => ({
+      ...prev,
+      [id]: (prev[id] || 0) + 1
+    }));
+  };
+
+  const removeItem = id => {
+    setCounts(prev => ({
+      ...prev,
+      [id]: Math.max((prev[id] || 0) - 1, 0)
+    }));
+  };
+
   return (
     <div className="beauty-page">
 
-      <h1>Beauty Products</h1>
+      <h1>Beauty Collection</h1>
 
       <div className="beauty-grid">
 
-        {beautyProducts.map(product => (
+        {beautyProducts.map(product => {
 
-          <div key={product.id} className="beauty-card">
+          const qty = counts[product.id] || 0;
 
-            <img src={product.image} alt={product.name} />
+          return (
+            <div key={product.id} className="beauty-card">
 
-            <h3>{product.name}</h3>
+              <img src={product.image} alt={product.name} />
 
-            <p>₹ {product.price}</p>
+              <h3>{product.name}</h3>
+              <p>₹ {product.price}</p>
 
-          </div>
+              <div className="cart-controls">
 
-        ))}
+                <button
+                  className="cart-btn"
+                  onClick={() => removeItem(product.id)}
+                >
+                  −
+                </button>
+
+                <span>{qty}</span>
+
+                <button
+                  className="cart-btn"
+                  onClick={() => addItem(product.id)}
+                >
+                  +
+                </button>
+
+              </div>
+
+            </div>
+          );
+        })}
 
       </div>
-
     </div>
   );
 };
 
 export default Beauty;
+
 
 

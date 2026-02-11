@@ -1,14 +1,77 @@
-import React from "react";
-// import kidsdress from "../assets/kidsdress.jpg";
+import React, { useState } from "react";
+import { products } from "../Services/Product";
+import "./Kids.css";
 
 const Kids = () => {
+
+  // filter kids products
+  const kidsProducts = products.filter(product =>
+    product.name.toLowerCase().includes("kids")
+  );
+
+  // quantity state
+  const [counts, setCounts] = useState({});
+
+  const addItem = id => {
+    setCounts(prev => ({
+      ...prev,
+      [id]: (prev[id] || 0) + 1
+    }));
+  };
+
+  const removeItem = id => {
+    setCounts(prev => ({
+      ...prev,
+      [id]: Math.max((prev[id] || 0) - 1, 0)
+    }));
+  };
+
   return (
-    <div className="kid">
-      {/* <img src={kidsdress} alt="Kids dress" /> */}
-      <h1>Kids Page</h1>
+    <div className="kids-page">
+
+      <h1>Kids Collection</h1>
+
+      <div className="kids-grid">
+
+        {kidsProducts.map(product => {
+
+          const qty = counts[product.id] || 0;
+
+          return (
+            <div key={product.id} className="kids-card">
+
+              <img src={product.image} alt={product.name} />
+
+              <h3>{product.name}</h3>
+              <p>₹ {product.price}</p>
+
+              <div className="cart-controls">
+
+                <button
+                  className="cart-btn"
+                  onClick={() => removeItem(product.id)}
+                >
+                  −
+                </button>
+
+                <span>{qty}</span>
+
+                <button
+                  className="cart-btn"
+                  onClick={() => addItem(product.id)}
+                >
+                  +
+                </button>
+
+              </div>
+
+            </div>
+          );
+        })}
+
+      </div>
     </div>
   );
 };
 
 export default Kids;
-
