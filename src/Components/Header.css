@@ -44,7 +44,7 @@ a {
 
 .promo-bar {
   width: 100%;
-  background: black;
+background: #5b2d8b;
   color: white;
   overflow: hidden;
   white-space: nowrap;
@@ -82,7 +82,8 @@ a {
   justify-content: center;
   gap: 40px;
   padding: 15px;
-  background: black;
+  background: linear-gradient(90deg, #ff0080, #007bff);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   font-size: 18px;
 }
 

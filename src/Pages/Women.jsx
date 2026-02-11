@@ -1,37 +1,75 @@
-import React from "react";
-import { products } from "../Services/Product"; // adjust path if needed
-import "./Women.css"
+import React, { useState } from "react";
+import { products } from "../Services/Product";
+import "./Women.css";
 
 const Women = () => {
 
-  // filter shoe products
+  // filter women products
   const womenProducts = products.filter(product =>
     product.name.toLowerCase().includes("women")
   );
 
+  // quantity state
+  const [counts, setCounts] = useState({});
+
+  const addItem = id => {
+    setCounts(prev => ({
+      ...prev,
+      [id]: (prev[id] || 0) + 1
+    }));
+  };
+
+  const removeItem = id => {
+    setCounts(prev => ({
+      ...prev,
+      [id]: Math.max((prev[id] || 0) - 1, 0)
+    }));
+  };
+
   return (
     <div className="women-page">
 
-      <h1>Women's Collections</h1>
+      <h1>Women's Collection</h1>
 
-      <div className="Women-grid">
+      <div className="women-grid">
 
-        {womenProducts.map(product => (
+        {womenProducts.map(product => {
 
-          <div key={product.id} className="women-card">
+          const qty = counts[product.id] || 0;
 
-            <img src={product.image} alt={product.name} />
+          return (
+            <div key={product.id} className="women-card">
 
-            <h3>{product.name}</h3>
+              <img src={product.image} alt={product.name} />
 
-            <p>₹ {product.price}</p>
+              <h3>{product.name}</h3>
+              <p>₹ {product.price}</p>
 
-          </div>
+              <div className="cart-controls">
 
-        ))}
+                <button
+                  className="cart-btn"
+                  onClick={() => removeItem(product.id)}
+                >
+                  −
+                </button>
+
+                <span>{qty}</span>
+
+                <button
+                  className="cart-btn"
+                  onClick={() => addItem(product.id)}
+                >
+                  +
+                </button>
+
+              </div>
+
+            </div>
+          );
+        })}
 
       </div>
-
     </div>
   );
 };

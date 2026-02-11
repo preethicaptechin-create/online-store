@@ -93,9 +93,15 @@ import lipstick from "../assets/lipstick.jpg"
 import lipstick2 from "../assets/lipstick2.jpg"
 import lipgloss from "../assets/lipgloss.jpg"
 import eyeshadow from "../assets/eyeshadow.jpg"
-
-
-
+import phone13 from "../assets/phone13.jpg"
+import kiddress from "../assets/kiddress.jpg"
+import kidscoat3 from "../assets/kidscoat3.jpg"
+import kidtshirt from "../assets/kidtshirt.jpg"
+import kiddress5 from "../assets/kiddress5.jpg"
+import kiddress4 from "../assets/kiddress4.jpg"
+import baby from "../assets/baby.jpg"
+import baby2 from "../assets/baby2.jpg"
+import baby3 from "../assets/baby3.jpg"
 export const products = [
   {
     id: 1,
@@ -265,6 +271,8 @@ export const products = [
     price: 29000,
     image: phone11,
   },
+ 
+
    {
     id: 29,
     name: " men",
@@ -457,6 +465,54 @@ export const products = [
     name: " beauty",
     price: 1150,
     image: eyeshadow,
+  },
+     {
+    id: 62,
+      name: " Mobiles",
+    price: 29000,
+    image: phone13
+  },
+    {
+    id: 63,
+    name: "Kids Coat",
+    price: 500,
+    image: kidscoat3,
+  },
+     {
+    id: 64,
+    name: "Kids Dress",
+    price: 500,
+    image: kiddress,
+  },
+     {
+    id: 65,
+    name: "Kids T-shirt",
+    price: 500,
+    image: baby2,
+  },
+    {
+    id: 66,
+    name: "Kids dress",
+    price: 500,
+    image: baby,
+  },
+    {
+    id: 67,
+    name: "Kids T-shirt",
+    price: 500,
+    image: kiddress4,
+  },
+    {
+    id: 67,
+    name: "Kids T-shirt",
+    price: 500,
+    image: kiddress5,
+  },
+    {
+    id: 68,
+    name: "Kids T-shirt",
+    price: 500,
+    image: baby3,
   },
 
 
