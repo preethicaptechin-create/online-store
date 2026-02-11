@@ -102,60 +102,71 @@ import kiddress4 from "../assets/kiddress4.jpg"
 import baby from "../assets/baby.jpg"
 import baby2 from "../assets/baby2.jpg"
 import baby3 from "../assets/baby3.jpg"
+
+
 export const products = [
   {
     id: 1,
     name: "Kids Frock",
     price: 800,
     image: frock,
+    category: "kids"
   },
   {
     id: 2,
     name: "Kids Coat",
     price: 500,
     image: kidscoat,
+     category: "kids"
   },
   {
     id: 3,
     name: "Kids Pink Frock",
     price: 100,
     image: kidspink,
+     category: "kids"
   },
   {
     id: 4,
     name: "Kids T-Shirt",
     price: 200,
     image: tshirt,
+     category: "kids"
   },
   {
     id: 5,
-    name: " skirt",
+    name: "womens skirt",
     price: 200,
     image: skirt,
+     category: "Women"
   },
    {
     id: 6,
     name: " Denim coat",
     price: 200,
     image: menscoat,
+    category: "women"
   },
    {
     id: 7,
     name: " Mobiles",
     price: 200,
     image: phone,
+     category: "mobile"
   },
    {
     id: 8,
     name: " shoes",
     price: 500,
     image: shoes,
+     category: "shoes"
   },
      {
     id: 9,
     name: " shoes",
     price: 800,
     image: shoe1,
+     category: "shoes"
   },
      {
     id: 10,
@@ -168,108 +179,126 @@ export const products = [
     name: " shoes",
     price: 1300,
     image: shoe3,
+     category: "shoes"
   },
      {
     id: 12,
     name: " shoes",
     price: 1400,
     image: shoe4,
+     category: "shoes"
   },
      {
     id: 13,
     name: " shoes",
     price: 2000,
     image: shoe5,
+     category: "shoes"
   },
      {
     id: 14,
     name: " shoes",
     price: 1500,
     image: shoe6,
+     category: "shoes"
   },
      {
     id: 15,
     name: " shoes",
     price: 400,
     image: shoe7,
+     category: "shoes"
   },
      {
     id: 16,
     name: " shoes",
     price: 300,
     image: shoe8,
+     category: "shoes"
   },
      {
     id: 17,
     name: " shoes",
     price: 500,
     image: shoe9,
+     category: "shoes"
   },
      {
     id: 18,
     name: " shoes",
     price: 800,
     image: shoe10,
+     category: "shoes"
   },
      {
     id: 19,
     name: " Mobiles",
     price: 15000,
     image: phone1,
+     category: "mobile"
   },
    {
     id: 20,
     name: " Mobiles",
     price: 18000,
     image: phone2,
+     category: "mobile"
   },
    {
     id: 21,
     name: " Mobiles",
     price: 20000,
     image: phone3,
+     category: "mobile"
   },
    {
     id: 22,
     name: "  Mobiles",
     price: 25000,
     image: phone4,
+     category: "mobile"
   },
    {
     id: 23,
     name: "  Mobiles",
     price: 30000,
     image: phone5,
+    category: "mobile"
   },
    {
     id: 24,
     name: " Mobiles",
     price: 24000,
     image: phone6,
+    category: "mobile"
   },
    {
     id: 25,
     name: " Mobiles",
     price: 25000,
     image: phone7,
+    category: "mobile"
   },
    {
     id: 26,
     name: " Mobiles",
     price: 18000,
     image: phone9,
+    category: "mobile"
   },
    {
     id: 27,
     name: " Mobiles",
     price: 26000,
     image: phone10,
+    category: "mobile"
   },
    {
     id: 28,
     name: " Mobiles",
     price: 29000,
     image: phone11,
+    category: "mobile"
   },
  
 
@@ -278,42 +307,49 @@ export const products = [
     name: " men",
     price: 900,
     image: Men1,
+    category: "men"
   },
    {
     id: 30,
     name: " men",
     price: 500,
     image: Men2,
+    category: "men"
   },
    {
     id: 31,
     name: " men",
     price: 650,
     image: Men3,
+    category: "men"
   },
    {
     id: 32,
     name: " men",
     price: 800,
     image: Men4,
+    category: "men"
   },
    {
     id: 33,
     name: " men",
     price: 900,
     image: Men5,
+    category: "men"
   },
    {
     id: 34,
     name: " men",
     price: 1500,
     image: Men6,
+    category: "men"
   },
    {
     id: 35,
     name: " men",
     price: 2000,
     image: Men7,
+    category: "men"
   },
  
    {
@@ -321,198 +357,231 @@ export const products = [
     name: " men",
     price: 1600,
     image: Men9,
+    category: "men"
   },
    {
     id: 38,
     name: " men",
     price: 2500,
     image: Men10,
+    category: "men"
   },
    {
     id: 39,
     name: " men",
     price: 1000,
     image: Men11,
+    category: "men"
   },
    {
     id: 40,
     name: " men",
     price: 2200,
     image: Men12,
+    category: "men"
   },
    {
     id: 41,
     name: " men",
     price: 1150,
     image: Men13,
+    category: "men"
   },
     {
     id: 42,
-    name: "croptop ",
+    name: "women ",
     price: 1150,
     image: croptop2,
-  },
+   category: "women"
+    },
     {
     id: 43,
-    name: " croptop",
+    name: " women ",
     price: 1150,
     image: croptop,
+    category: "women"
   },
     {
     id: 44,
-    name: " Maxidress",
+    name: " women",
     price: 1150,
     image: maxi,
+     category: "women"
   },
     {
     id: 45,
-    name: " tops",
+    name: " women ",
     price: 1150,
     image: Tops,
+     category: "women"
   },
     {
     id: 46,
-    name: " Girls pants",
+    name: " women ",
     price: 1150,
     image: Womenpants,
+     category: "women"
   },
    {
     id: 47,
-    name: " Choli",
+    name: " women ",
     price: 1150,
     image: choli,
+     category: "women"
   },
    {
     id: 48,
-    name: " Lehanga",
+    name: " women ",
     price: 1150,
     image: lehanga,
+     category: "women"
   },
    {
     id: 49,
     name: " Womens shirt",
     price: 1150,
     image: Womenshirt,
+     category: "women"
   },
    {
     id: 50,
     name: " Womens t-shirt",
     price: 1150,
     image: Womentshirt,
+     category: "women"
   },
    {
     id: 51,
-    name: " Saree",
+    name: " Womens Saree",
     price: 1150,
     image: Saree,
+    category: "women"
   },
    {
     id: 52,
     name: " beauty",
     price: 1150,
     image: perfume2,
+    category: "beauty"
   },
   {
     id: 53,
     name: "beauty",
     price: 1150,
     image: perfume,
+    category: "beauty"
   },
   {
     id: 54,
     name: " beauty",
     price: 1150,
     image: facewash,
+    category: "beauty"
   },
   {
     id: 55,
     name: " beauty",
     price: 1150,
     image: kit,
+    category: "beauty"
   },
   {
     id: 56,
     name: " beauty",
     price: 1150,
     image: cream,
+    category: "beauty"
   },
    {
     id: 57,
     name: " beauty",
     price: 1150,
     image: brush,
+    category: "beauty"
   },
    {
     id: 58,
     name: " beauty",
     price: 1150,
     image: lipstick2,
+    category: "beauty"
   },
    {
     id: 59,
     name: " beauty",
     price: 1150,
     image: lipgloss,
+    category: "beauty"
   },
    {
     id: 60,
     name: " beauty",
     price: 1150,
     image:lipstick ,
+    category: "beauty"
   },
    {
     id: 61,
     name: " beauty",
     price: 1150,
     image: eyeshadow,
+    category: "beauty"
   },
      {
     id: 62,
-      name: " Mobiles",
+    name: " Mobiles",
     price: 29000,
-    image: phone13
+    image: phone13,
+    category: "mobile"
   },
     {
     id: 63,
     name: "Kids Coat",
     price: 500,
     image: kidscoat3,
+    category: "kids"
   },
      {
     id: 64,
     name: "Kids Dress",
     price: 500,
     image: kiddress,
+    category: "kids"
   },
      {
     id: 65,
     name: "Kids T-shirt",
     price: 500,
     image: baby2,
+    category: "kids"
   },
     {
     id: 66,
     name: "Kids dress",
     price: 500,
     image: baby,
+    category: "kids"
   },
     {
     id: 67,
     name: "Kids T-shirt",
     price: 500,
     image: kiddress4,
+    category: "kids"
   },
     {
     id: 67,
     name: "Kids T-shirt",
     price: 500,
     image: kiddress5,
+    category: "kids"
   },
     {
     id: 68,
     name: "Kids T-shirt",
     price: 500,
     image: baby3,
+    category: "kids"
   },
 
 
