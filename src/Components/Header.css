@@ -86,6 +86,10 @@ background: #5b2d8b;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   font-size: 18px;
 }
+.logo {
+ height: 3px;
+}
+
 
 .header a {
   text-decoration: none;

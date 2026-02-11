@@ -45,10 +45,9 @@ import "./Mobile.css";
 const Mobile = () => {
 
   // filter mobile products
-  const mobileProducts = products.filter(product =>
-    product.name.toLowerCase().includes("mobile")
-  );
-
+const mobileProducts = products.filter(
+  product => product.category === "mobile"
+);
   // quantity state
   const [counts, setCounts] = useState({});
 

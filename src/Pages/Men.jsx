@@ -5,11 +5,11 @@ import "./Men.css";
 const Men = () => {
 
   // filter men products
-  const menProducts = products.filter(product =>
-    product.name.toLowerCase().includes("men")
-  );
+const menProducts = products.filter(
+  product => product.category === "men"
+);
 
-  const [counts, setCounts] = useState({});
+const [counts, setCounts] = useState({});
 
   const addItem = id => {
     setCounts(prev => ({

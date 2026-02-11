@@ -5,11 +5,12 @@ import "./ProductList.css";
 function ProductList() {
   return (
     <div className="product-grid">
- {products.map((product) => (
-  <ProductCard key={product.id} product={product} />
-))}
-
-     
+      {products.map((product) => (
+        <ProductCard
+          key={product.id}
+          product={product}
+        />
+      ))}
     </div>
   );
 }

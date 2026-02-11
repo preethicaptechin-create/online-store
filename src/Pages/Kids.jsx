@@ -5,9 +5,9 @@ import "./Kids.css";
 const Kids = () => {
 
   // filter kids products
-  const kidsProducts = products.filter(product =>
-    product.name.toLowerCase().includes("kids")
-  );
+ const kidsProducts = products.filter(
+  product => product.category === "kids"
+);
 
   // quantity state
   const [counts, setCounts] = useState({});
