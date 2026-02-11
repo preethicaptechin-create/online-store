@@ -114,7 +114,8 @@ function App() {
             <Route path="/women" element={<Women />} />
             <Route path="/kids" element={<Kids />} />
             <Route path="/beauty" element={<Beauty />} />
-            <Route path="/mobile" element={<Mobile />} />
+          <Route path="/mobiles" element={<Mobile />} />
+
             <Route path="/shoes" element={<Shoes />} />
           </Routes>
         </main>
