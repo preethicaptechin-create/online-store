@@ -48,9 +48,9 @@
 
 
 
-/* PAGE WRAPPER */
 
-.details-page {
+
+/* .details-page {
   padding: 50px 20px;
   display: flex;
   justify-content: center;
@@ -58,7 +58,7 @@
   min-height: 80vh;
 }
 
-/* CARD */
+
 
 .details-card {
   display: flex;
@@ -79,7 +79,6 @@
   transform: translateY(-4px);
 }
 
-/* IMAGE SECTION */
 
 .details-card img {
   width: 380px;
@@ -95,7 +94,7 @@
   transform: scale(1.05);
 }
 
-/* INFO SECTION */
+
 
 .details-info {
   flex: 1;
@@ -114,7 +113,7 @@
   color: #555;
 }
 
-/* PRICE */
+
 
 .price {
   font-size: 28px;
@@ -122,12 +121,12 @@
   color: #ff2f92;
 }
 
-/* BUTTON */
+
 
 .details-info button {
   margin-top: 15px;
-  padding: 14px;
-  width: 200px;
+  padding: 10px;
+  width: 100px;
 
   border: none;
   border-radius: 8px;
@@ -148,7 +147,7 @@
   box-shadow: 0 6px 15px rgba(255,47,146,0.4);
 }
 
-/* RESPONSIVE */
+
 
 @media (max-width: 768px) {
 
@@ -168,18 +167,18 @@
     align-items: center;
   }
 }
-/* SIZE SECTION */
 
-/* ===== PROFESSIONAL SIZE SELECTOR ===== */
 
-/* SIZE CONTAINER */
+
+
+
 .size-selector {
   display: flex;
   gap: 12px;
   margin-top: 12px;
 }
 
-/* SIZE BUTTON */
+
 .size-btn {
   width: 48px;
   height: 38px;
@@ -187,7 +186,7 @@
   border: none;
   border-radius: 6px;
 
-  background: white; /* grey box */
+  background: white; 
   color: #222;
 
   font-size: 14px;
@@ -202,15 +201,229 @@
   transition: all 0.2s ease;
 }
 
-/* hover */
+
 .size-btn:hover {
   background: #666;
   color: white;
 }
 
-/* selected */
+
 .size-btn.active {
   background: #444;
   color: white;
   transform: scale(1.05);
+} */
+
+
+
+/* ===== PAGE WRAPPER ===== */
+
+.details-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  background: #f5f5f5;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ===== CARD ===== */
+
+.details-card {
+  background: #ffffff;
+
+  width: 100%;
+  max-width: 950px;
+
+  border-radius: 12px;
+  padding: 24px;
+
+  display: flex;
+  gap: 30px;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== IMAGE ===== */
+
+.details-card img {
+  width: 320px;
+  height: 320px;
+
+  object-fit: contain;
+
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 12px;
+
+  transition: transform 0.25s ease;
+}
+
+.details-card img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== INFO SECTION ===== */
+
+.details-info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* title */
+
+.details-info h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* price */
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+}
+
+/* category */
+
+.details-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== SIZE SELECTOR ===== */
+
+.size-selector {
+  margin-top: 10px;
+}
+
+.size-label {
+  display: block;
+  margin-bottom: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+}
+
+.size-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* size buttons */
+
+.size-btn {
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #ddd;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #333;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+/* hover */
+
+.size-btn:hover {
+  border-color: black;
+  background: #f0f6ff;
+  color:linear-gradient(90deg, #ff0080, #007bff);
+}
+
+/* selected */
+
+.size-btn.active {
+  border: 2px solid black;
+  background: #ffffff;
+  color: white;
+
+  transform: scale(1.08);
+}
+
+/* ===== ADD TO CART BUTTON ===== */
+
+/* .details-info button {
+  margin-top: 14px;
+
+  background:linear-gradient(90deg, #ff0080, #007bff);
+
+  color: #ffffff;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+  
+}
+
+.details-info button:hover {
+  background: #1c5ed6;
+  transform: translateY(-1px);
+} */
+ .details-info .size-btn {
+  margin-top: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.details-info .add-cart-btn {
+  margin-top: 14px;
+  background: linear-gradient(90deg, #ff0080, #007bff);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100px;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .details-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-card img {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .details-info {
+    width: 100%;
+  }
 }
