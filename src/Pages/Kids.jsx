@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { products } from "../Services/Product";
+import { Link } from "react-router-dom";
 import "./Kids.css";
 
 const Kids = () => {
@@ -40,7 +41,10 @@ const Kids = () => {
           return (
             <div key={product.id} className="kids-card">
 
-              <img src={product.image} alt={product.name} />
+              {/* <img src={product.image} alt={product.name} /> */}
+                           <Link to={`/product/${product.id}`}>
+                <img src={product.image} alt={product.name} />
+              </Link>
 
               <h3>{product.name}</h3>
               <p>₹ {product.price}</p>

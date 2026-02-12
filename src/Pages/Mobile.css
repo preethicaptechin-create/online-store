@@ -142,6 +142,10 @@
   object-fit: cover;
   border-radius: 8px;
 }
+.mobile-card a {
+  display: block;
+  width: 100%;
+}
 
 /* TEXT */
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { products } from "../Services/Product";
+import { Link } from "react-router-dom";
 import "./Beauty.css";
 
 const Beauty = () => {
@@ -8,6 +9,7 @@ const Beauty = () => {
 const beautyProducts = products.filter(
   product => product.category === "beauty"
 );
+  
 
   // quantity state
   const [counts, setCounts] = useState({});
@@ -40,7 +42,10 @@ const beautyProducts = products.filter(
           return (
             <div key={product.id} className="beauty-card">
 
-              <img src={product.image} alt={product.name} />
+              {/* <img src={product.image} alt={product.name} /> */}
+                           <Link to={`/product/${product.id}`}>
+  <img src={product.image} alt={product.name} />
+</Link>
 
               <h3>{product.name}</h3>
               <p>₹ {product.price}</p>

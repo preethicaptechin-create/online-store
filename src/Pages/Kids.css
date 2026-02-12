@@ -36,6 +36,10 @@
   object-fit: cover;
   border-radius: 8px;
 }
+.kids-card a {
+  display: block;
+  width: 100%;
+}
 
 .kids-card h3 {
   margin: 8px 0 4px;

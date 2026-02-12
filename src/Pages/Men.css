@@ -42,6 +42,12 @@
   object-fit: cover;
   border-radius: 8px;
 }
+/* KEEP image size stable when wrapped in Link */
+.men-card a {
+  display: block;
+  width: 100%;
+}
+
 
 /* TEXT */
 

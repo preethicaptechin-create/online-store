@@ -42,6 +42,10 @@
   object-fit: cover;
   border-radius: 8px;
 }
+.shoe-card a {
+  display: block;
+  width: 100%;
+}
 
 /* TEXT */
 
