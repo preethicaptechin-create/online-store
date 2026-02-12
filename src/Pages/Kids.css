@@ -52,32 +52,30 @@
 
 /* shared cart styles */
 
-.cart-controls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.add-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+
+  border: none;
+  border-radius: 8px;
 
   background: linear-gradient(135deg, #ff2f92, #2f6bff);
-  padding: 6px 10px;
-  border-radius: 30px;
-}
+  color: white;
 
-.cart-btn {
-  width: 36px;
-  height: 36px;
-  border: none;
-  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
 
-  background: white;
-  font-size: 20px;
   cursor: pointer;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: all 0.2s ease;
 }
 
-.cart-controls span {
-  font-size: 18px;
-  font-weight: bold;
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.add-btn:active {
+  transform: scale(0.95);
 }

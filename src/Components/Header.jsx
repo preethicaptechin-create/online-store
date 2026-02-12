@@ -14,11 +14,13 @@
 // export default Header;
 
 import "./Header.css";
-import { Link } from "react-router-dom";
+
 import { FaShoppingCart } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import logo1 from "../assets/logo1.jpg"
 
 function Header() {
+    const navigate = useNavigate(); 
   return (
     <header>
 
@@ -48,7 +50,11 @@ function Header() {
           type="text"
           placeholder="Search products..."
         />
-         <FaShoppingCart className="cart-icon" />
+         {/* <FaShoppingCart className="cart-icon" /> */}
+         <FaShoppingCart
+  className="cart-icon"
+  onClick={() => navigate("/cart")}
+/>
       </div>
 
     </header>
