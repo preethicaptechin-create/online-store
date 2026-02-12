@@ -108,7 +108,9 @@ import Shoe18 from "../assets/shoe18.jpg"
 import Shoe19 from "../assets/shoe19.jpg"
 // import shoe20 from "../assets/shoe20.jpg"
 import Soe from "../assets/Soe.jpg"
-
+import Kurti3 from "../assets/Kurti3.jpg"
+import Kurti4 from "../assets/Kurti4.jpg"
+import Kurti5 from "../assets/Kurti4.jpg"
 
 export const products = [
   {
@@ -403,42 +405,42 @@ export const products = [
     },
     {
     id: 43,
-    name: " women ",
+    name: " Tops ",
     price: 1150,
     image: croptop,
     category: "women"
   },
     {
     id: 44,
-    name: " women",
+    name: " maxi",
     price: 1150,
     image: maxi,
      category: "women"
   },
     {
     id: 45,
-    name: " women ",
+    name: " Tops",
     price: 1150,
     image: Tops,
      category: "women"
   },
     {
     id: 46,
-    name: " women ",
+    name: "Pants ",
     price: 1150,
     image: Womenpants,
      category: "women"
   },
    {
     id: 47,
-    name: " women ",
+    name: " Choli",
     price: 1150,
     image: choli,
      category: "women"
   },
    {
     id: 48,
-    name: " women ",
+    name: " Lehanga",
     price: 1150,
     image: lehanga,
      category: "women"
@@ -459,9 +461,9 @@ export const products = [
   },
    {
     id: 51,
-    name: " Womens Saree",
+    name: " Kurti",
     price: 1150,
-    image: Saree,
+    image: Kurti3,
     category: "women"
   },
    {
@@ -577,21 +579,21 @@ export const products = [
     category: "kids"
   },
     {
-    id: 67,
+    id: 68,
     name: "Kids T-shirt",
     price: 500,
     image: kiddress5,
     category: "kids"
   },
     {
-    id: 68,
+    id: 69,
     name: "Kids T-shirt",
     price: 500,
     image: baby3,
     category: "kids"
   },
   {
-    id: 69,
+    id: 70,
     name: "Kurti",
     price: 500,
     image: kurti1,
@@ -599,19 +601,34 @@ export const products = [
   },
 
   {
-    id: 70,
+    id: 71,
     name: "Kurti",
     price: 500,
     image: kurti2,
     category: "women"
   },
       {
-    id: 71,
+    id: 72,
     name: " shoes",
     price: 800,
     image: Shoe18,
      category: "shoes"
   },
+  {
+    id: 73,
+    name: " Kurti",
+    price: 1150,
+    image: Kurti5,
+    category: "women"
+  },
+   {
+    id: 74,
+    name: " Kurti",
+    price: 1150,
+    image: Kurti4,
+    category: "women"
+  },
+
 
 
 

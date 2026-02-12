@@ -30,3 +30,42 @@
 .add-btn:hover {
   background: #e0267f;
 }
+/* SIZE SELECTOR CONTAINER */
+
+/* SIZE CONTAINER */
+/* SIZE CONTAINER */
+/* ===== FORCE SIZE BUTTON STYLE ===== */
+
+.product-card .size-btn {
+  width: 48px;
+  height: 38px;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #333;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.product-card .size-btn:hover {
+  border-color: #888;
+  background: #f5f5f5;
+  color: #111;
+}
+
+.product-card .size-btn.active {
+  border: 2px solid #222;
+  background: #222;
+  color: white;
+}

@@ -95,6 +95,7 @@ import Beauty from "./Pages/Beauty";
 import Shoes from "./Pages/Shoes";
 import Mobile from "./Pages/Mobile";
 import ProductDetails from "./Pages/ProductDetails";
+import Cart from "./Pages/Cart";
 
 
 
@@ -121,6 +122,9 @@ function App() {
 
             <Route path="/shoes" element={<Shoes />} />
             <Route path="/product/:id" element={<ProductDetails />} />
+         <Route path="/cart" element={<Cart />} />
+
+
 
           </Routes>
         </main>
