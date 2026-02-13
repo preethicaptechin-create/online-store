@@ -81,34 +81,58 @@
 // export default Kids;
 
 
-import React from "react";
+
+
+import React, { useState } from "react";
 import { products } from "../Services/Product";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Kids.css";
 
 const Kids = () => {
 
-  const navigate = useNavigate();
+  // store selected sizes per product
+  const [sizes, setSizes] = useState({});
 
   // filter kids products
   const kidsProducts = products.filter(
     product => product.category === "kids"
   );
 
-  // ✅ Add to cart
+  // select size
+  const handleSizeSelect = (productId, size) => {
+    setSizes(prev => ({
+      ...prev,
+      [productId]: size
+    }));
+  };
+
+  // add to cart
   const handleAddToCart = (product) => {
+
+    const selectedSize = sizes[product.id];
+
+    if (!selectedSize) {
+      alert("Please select size");
+      return;
+    }
 
     const existingCart =
       JSON.parse(localStorage.getItem("cart")) || [];
 
     const item = existingCart.find(
-      i => i.id === product.id
+      i =>
+        i.id === product.id &&
+        i.size === selectedSize
     );
 
     if (item) {
       item.qty += 1;
     } else {
-      existingCart.push({ ...product, qty: 1 });
+      existingCart.push({
+        ...product,
+        size: selectedSize,
+        qty: 1
+      });
     }
 
     localStorage.setItem(
@@ -116,8 +140,7 @@ const Kids = () => {
       JSON.stringify(existingCart)
     );
 
-    // 👉 go to cart page
-    navigate("/cart");
+    alert("Item added to cart 🛒");
   };
 
   return (
@@ -127,32 +150,61 @@ const Kids = () => {
 
       <div className="kids-grid">
 
-        {kidsProducts.map(product => (
+        {kidsProducts.map(product => {
 
-          <div key={product.id} className="kids-card">
+          const selectedSize = sizes[product.id];
 
-            {/* Click image → details */}
-            <Link to={`/product/${product.id}`}>
-              <img
-                src={product.image}
-                alt={product.name}
-              />
-            </Link>
+          return (
 
-            <h3>{product.name}</h3>
-            <p>₹ {product.price}</p>
+            <div key={product.id} className="kids-card">
 
-            {/* ✅ Add to cart button */}
-            <button
-              className="add-btn"
-              onClick={() => handleAddToCart(product)}
-            >
-              Add to Cart
-            </button>
+              <Link to={`/product/${product.id}`}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                />
+              </Link>
 
-          </div>
+              <h3>{product.name}</h3>
+              <p>₹ {product.price}</p>
 
-        ))}
+              {/* selected size */}
+              {selectedSize && (
+                <p className="selected-size">
+                  Size: {selectedSize}
+                </p>
+              )}
+
+              {/* size buttons */}
+              <div className="size-preview">
+                {[6, 7, 8, 9, 10].map(s => (
+                  <button
+                    key={s}
+                    className={
+                      selectedSize === s
+                        ? "size-box active"
+                        : "size-box"
+                    }
+                    onClick={() =>
+                      handleSizeSelect(product.id, s)
+                    }
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+
+              <button
+                className="add-btn"
+                onClick={() => handleAddToCart(product)}
+              >
+                Add to Cart
+              </button>
+
+            </div>
+
+          );
+        })}
 
       </div>
 

@@ -88,3 +88,26 @@
 .add-btn:active {
   transform: scale(0.95);
 }
+.selected-size {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2874f0;
+}
+
+.size-preview {
+  display: flex;
+  gap: 5px;
+}
+
+.size-box {
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.size-box.active {
+  border-color: #2874f0;
+  color: #2874f0;
+  font-weight: bold;
+}

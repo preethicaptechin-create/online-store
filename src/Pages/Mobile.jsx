@@ -136,12 +136,12 @@
 
 import React from "react";
 import { products } from "../Services/Product";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Mobile.css";
 
 const Mobile = () => {
 
-  const navigate = useNavigate();
+
 
   // filter mobile products
   const mobileProducts = products.filter(
@@ -149,7 +149,7 @@ const Mobile = () => {
   );
 
   // ✅ Add to cart
-  const handleAddToCart = (product) => {
+   const handleAddToCart = (product) => {
 
     const existingCart =
       JSON.parse(localStorage.getItem("cart")) || [];
@@ -169,9 +169,10 @@ const Mobile = () => {
       JSON.stringify(existingCart)
     );
 
-    // 👉 go to cart
-    navigate("/cart");
+    // ✅ feedback
+    alert("Item added to cart 🛒");
   };
+
 
   return (
     <div className="mobile-page">

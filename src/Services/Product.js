@@ -468,7 +468,7 @@ export const products = [
   },
    {
     id: 52,
-    name: " Lucury perfumes",
+    name: " Luxury perfumes",
     price: 1150,
     image: perfume2,
     category: "beauty"

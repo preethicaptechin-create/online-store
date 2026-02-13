@@ -85,12 +85,12 @@
 
 import React from "react";
 import { products } from "../Services/Product";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Beauty.css";
 
 const Beauty = () => {
 
-  const navigate = useNavigate();
+
 
   // filter beauty products
   const beautyProducts = products.filter(
@@ -98,7 +98,7 @@ const Beauty = () => {
   );
 
   // ✅ Add to cart
-  const handleAddToCart = (product) => {
+   const handleAddToCart = (product) => {
 
     const existingCart =
       JSON.parse(localStorage.getItem("cart")) || [];
@@ -118,9 +118,10 @@ const Beauty = () => {
       JSON.stringify(existingCart)
     );
 
-    // 👉 go to cart page
-    navigate("/cart");
+    // ✅ feedback
+    alert("Item added to cart 🛒");
   };
+
 
   return (
     <div className="beauty-page">

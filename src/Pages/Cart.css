@@ -178,3 +178,29 @@
 .checkout-btn:hover {
   background: pink;
 }
+
+
+.empty-cart {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-icon {
+  font-size: 70px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  margin-top: 15px;
+  padding: 10px 18px;
+  border: none;
+  background: #ff3f6c;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.shop-btn:hover {
+  opacity: 0.9;
+}
