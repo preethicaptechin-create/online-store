@@ -283,27 +283,38 @@
 
 // export default Men;
 
-import React from "react";
+import React, { useState } from "react";
 import { products } from "../Services/Product";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Men.css";
 
 const Men = () => {
 
-  const navigate = useNavigate();
+  // store selected sizes per product
+  const [sizes, setSizes] = useState({});
 
   // filter men products
   const menProducts = products.filter(
     product => product.category === "men"
   );
 
-  // ✅ Add to cart function
+  // select size
+  const handleSizeSelect = (productId, size) => {
+    setSizes(prev => ({
+      ...prev,
+      [productId]: size
+    }));
+  };
+
+  // add to cart
   const handleAddToCart = (product) => {
 
-    // get saved size (if user selected in details page)
-    const savedSize = JSON.parse(
-      localStorage.getItem(`size-${product.id}`)
-    );
+    const selectedSize = sizes[product.id];
+
+    if (!selectedSize) {
+      alert("Please select size");
+      return;
+    }
 
     const existingCart =
       JSON.parse(localStorage.getItem("cart")) || [];
@@ -311,7 +322,7 @@ const Men = () => {
     const item = existingCart.find(
       i =>
         i.id === product.id &&
-        i.size === savedSize
+        i.size === selectedSize
     );
 
     if (item) {
@@ -319,7 +330,7 @@ const Men = () => {
     } else {
       existingCart.push({
         ...product,
-        size: savedSize || null,
+        size: selectedSize,
         qty: 1
       });
     }
@@ -329,7 +340,7 @@ const Men = () => {
       JSON.stringify(existingCart)
     );
 
-    navigate("/cart");
+    alert("Item added to cart 🛒");
   };
 
   return (
@@ -341,15 +352,12 @@ const Men = () => {
 
         {menProducts.map(product => {
 
-          const savedSize = JSON.parse(
-            localStorage.getItem(`size-${product.id}`)
-          );
+          const selectedSize = sizes[product.id];
 
           return (
 
             <div key={product.id} className="men-card">
 
-              {/* image → details */}
               <Link to={`/product/${product.id}`}>
                 <img
                   src={product.image}
@@ -360,30 +368,32 @@ const Men = () => {
               <h3>{product.name}</h3>
               <p>₹ {product.price}</p>
 
-              {/* show selected size */}
-              {savedSize && (
+              {/* selected size */}
+              {selectedSize && (
                 <p className="selected-size">
-                  Size: {savedSize}
+                  Size: {selectedSize}
                 </p>
               )}
 
-              {/* preview sizes */}
+              {/* size buttons */}
               <div className="size-preview">
                 {[6, 7, 8, 9, 10].map(s => (
-                  <span
+                  <button
                     key={s}
                     className={
-                      savedSize === s
+                      selectedSize === s
                         ? "size-box active"
                         : "size-box"
                     }
+                    onClick={() =>
+                      handleSizeSelect(product.id, s)
+                    }
                   >
                     {s}
-                  </span>
+                  </button>
                 ))}
               </div>
 
-              {/* add button */}
               <button
                 className="add-btn"
                 onClick={() => handleAddToCart(product)}

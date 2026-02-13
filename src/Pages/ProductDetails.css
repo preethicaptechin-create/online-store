@@ -355,8 +355,8 @@
 
 .size-btn.active {
   border: 2px solid black;
-  background: #ffffff;
-  color: white;
+  /* background: #ffffff;
+  color: white; */
 
   transform: scale(1.08);
 }

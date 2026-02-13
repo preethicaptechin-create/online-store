@@ -1,86 +1,137 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
 
-function Login() {
+const Login = () => {
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [hasAccount, setHasAccount] = useState(false);
-  const [error, setError] = useState("");
+  const [formData, setFormData] = useState({
+    emailOrPhone: '',
+    password: '',
+  });
 
+  const [errors, setErrors] = useState({
+    emailOrPhone: '',
+    password: '',
+  });
 
-  useEffect(() => {
-    const savedUser = localStorage.getItem("userEmail");
-    if (savedUser) {
-      setEmail(savedUser);
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    let isValid = true;
+    const newErrors = { emailOrPhone: '', password: '' };
+
+    if (!formData.emailOrPhone.trim()) {
+      newErrors.emailOrPhone = 'Email or Phone is required';
+      isValid = false;
     }
-  }, []);
 
-  const validateEmail = (value) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+    if (!formData.password.trim()) {
+      newErrors.password = 'Password is required';
+      isValid = false;
+    } else if (formData.password.length < 6) {
+      newErrors.password = 'Password must be at least 6 characters';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
-  const handleLogin = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: '' }));
+    }
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!hasAccount) return setError("Please confirm you have an account");
+    if (!validateForm()) {
+      return;
+    }
 
-    if (!email || !password)
-      return setError("All fields are required");
+    setIsSubmitting(true);
 
-    if (!validateEmail(email))
-      return setError("Enter a valid email");
-
-    if (password.length < 6)
-      return setError("Password must be at least 6 characters");
-
- 
-    localStorage.setItem("userEmail", email);
-
-    setError("");
-
-
-    navigate("/");
+    // Simulate login success
+    setTimeout(() => {
+      setIsSubmitting(false);
+      alert('Login successful! (demo)');
+      navigate("/");  // Redirect to home page
+    }, 1000);
   };
 
   return (
-    <div className="login-overlay">
-      <div className="login-card">
+    <div className="login-page">
+      <div className="login-box">
         <h2>Login</h2>
+        <p>Welcome back! Please enter your details.</p>
 
-        <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email address"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <label className="checkbox">
+        <form onSubmit={handleSubmit} noValidate>
+          <div className="input-group">
+            <label>Email or Phone</label>
             <input
-              type="checkbox"
-              checked={hasAccount}
-              onChange={() => setHasAccount(!hasAccount)}
+              type="text"
+              name="emailOrPhone"
+              placeholder="example@email.com or 9876543210"
+              value={formData.emailOrPhone}
+              onChange={handleChange}
+              className={errors.emailOrPhone ? 'input-error' : ''}
             />
-            I already have an account
-          </label>
+            {errors.emailOrPhone && (
+              <span className="error-text">{errors.emailOrPhone}</span>
+            )}
+          </div>
 
-          {error && <p className="error">{error}</p>}
+          <div className="input-group password-group">
+            <label>Password</label>
+            <div className="password-wrapper">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                name="password"
+                placeholder="••••••••"
+                value={formData.password}
+                onChange={handleChange}
+                className={errors.password ? 'input-error' : ''}
+              />
+              <span
+                className="show-hide"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? 'Hide' : 'Show'}
+              </span>
+            </div>
+            {errors.password && (
+              <span className="error-text">{errors.password}</span>
+            )}
+          </div>
 
-          <button type="submit">Login</button>
+          <div className="options">
+            <label className="remember">
+              <input type="checkbox" />
+              Remember me
+            </label>
+            <Link to="/forgot-password" className="forgot">
+              Forgot password?
+            </Link>
+          </div>
+
+          <button
+            type="submit"
+            className="login-button"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Logging in...' : 'Login'}
+          </button>
         </form>
       </div>
     </div>
   );
-}
+};
 
 export default Login;
